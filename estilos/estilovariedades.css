@@ -1,0 +1,44 @@
+/*body*/
+
+body{
+    background-color: orange;
+}
+
+/*header*/
+.navbar{
+    background-color: brown !important;
+    background-image: linear-gradient(to right, orange, brown);
+}
+
+.nav-link{
+    color: black !important;
+    font-weight: bold;
+    font-size: large;
+}
+
+/*main*/
+
+.imagen{
+    margin: 20px;
+}
+
+.imagen :hover{
+    transform: scaleY(1.2);
+}
+
+/*footer*/
+.footer{
+    background-color: brown;
+    background-image: linear-gradient(to right, orange, brown);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer li{
+    font-size: 15px;
+    list-style: none;
+    padding: 10px;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
