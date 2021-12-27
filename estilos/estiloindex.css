@@ -28,7 +28,23 @@ main{
 }
 
 aside{
-    background-color: aquamarine;
+    background-color: lightpink;
+    animation-name: efecto;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+
+@keyframes efecto{
+    30%{
+        background-color: lightsalmon;
+    }
+    60%{
+        background-color: salmon;
+    }
+    90%{
+        background-color: sienna;
+    }
 }
 
 .borde{

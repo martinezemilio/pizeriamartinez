@@ -18,12 +18,20 @@ body{
 
 /*main*/
 
+.jumbotron{
+    background-image: url(../images/jumbotron.webp);
+    background-size: cover;
+    background-position: center;
+    font-weight: bolder;
+    font-style: italic;
+}
+
 .imagen{
     margin: 20px;
 }
 
 .imagen :hover{
-    transform: scaleY(1.2);
+    transform: scaleY(1.25);
 }
 
 /*footer*/
