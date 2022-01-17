@@ -1,0 +1,10 @@
+.footer{
+    @extend .navbar;
+    display: flex;
+    flex-wrap: wrap;
+    & li{
+        @extend .nav-link;
+        list-style: none;
+        padding: 10px;
+    }
+}

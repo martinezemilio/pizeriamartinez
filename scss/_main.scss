@@ -1,0 +1,42 @@
+main{
+    margin-top: 20px;
+    & .seccion{
+        background-color: $color4;
+        background-image: linear-gradient(to left, $color1, $color4);
+    }
+    & aside{
+        background-color: $color5;
+        animation-name: efecto;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+        animation-delay: 0s;
+        @keyframes efecto{
+            30%{
+                background-color: $color6;
+            }
+            60%{
+                background-color: $color7;
+            }
+            90%{
+                background-color: $color8;
+            }
+        }
+    }
+    & .borde{
+        height: 500px;
+        border: 1px solid $color3;
+    }
+    & .jumbotron{
+        background-image: url(../images/jumbotron.webp);
+        background-size: cover;
+        background-position: center;
+        font-weight: bolder;
+        font-style: $fuente;
+    }
+    & .imagen{
+        margin: 20px;
+        :hover{
+            transform: scaleY(1.25);
+        }
+    }
+}

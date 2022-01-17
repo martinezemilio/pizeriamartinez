@@ -1,0 +1,97 @@
+.navbar, .footer {
+  background-color: brown !important;
+  background-image: -webkit-gradient(linear, left top, right top, from(orange), to(brown));
+  background-image: linear-gradient(to right, orange, brown);
+}
+
+.navbar .nav-link, .footer .nav-link, .navbar .footer li, .footer .navbar li, .footer li {
+  color: black !important;
+  font-weight: bold;
+  font-size: large;
+}
+
+main {
+  margin-top: 20px;
+}
+
+main .seccion {
+  background-color: orangered;
+  background-image: -webkit-gradient(linear, right top, left top, from(orange), to(orangered));
+  background-image: linear-gradient(to left, orange, orangered);
+}
+
+main aside {
+  background-color: lightpink;
+  -webkit-animation-name: efecto;
+          animation-name: efecto;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+@-webkit-keyframes efecto {
+  30% {
+    background-color: lightsalmon;
+  }
+  60% {
+    background-color: salmon;
+  }
+  90% {
+    background-color: sienna;
+  }
+}
+
+@keyframes efecto {
+  30% {
+    background-color: lightsalmon;
+  }
+  60% {
+    background-color: salmon;
+  }
+  90% {
+    background-color: sienna;
+  }
+}
+
+main .borde {
+  height: 500px;
+  border: 1px solid black;
+}
+
+main .jumbotron {
+  background-image: url(../images/jumbotron.webp);
+  background-size: cover;
+  background-position: center;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+main .imagen {
+  margin: 20px;
+}
+
+main .imagen :hover {
+  -webkit-transform: scaleY(1.25);
+          transform: scaleY(1.25);
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer li {
+  list-style: none;
+  padding: 10px;
+}
+
+body {
+  background-color: orange;
+}
+/*# sourceMappingURL=estilos.css.map */
