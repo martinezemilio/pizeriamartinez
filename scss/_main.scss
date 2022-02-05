@@ -1,30 +1,37 @@
 main{
     margin-top: 20px;
     & .seccion{
-        background-color: $color4;
-        background-image: linear-gradient(to left, $color1, $color4);
+        margin: 30px;
+        background-color: $color2 !important;
+        background-image: linear-gradient(to right, $color2, $color1);    
     }
-    & aside{
-        background-color: $color5;
+    & p{
+        font-size: 16px;
+        color: $color1;
+    }
+    & .banner{
+        margin: 20px;
+        text-align: center;
+        background-color: $color3;
         animation-name: efecto;
         animation-iteration-count: infinite;
-        animation-duration: 5s;
+        animation-duration: 2s;
         animation-delay: 0s;
         @keyframes efecto{
             30%{
-                background-color: $color6;
+                background-color: $color4;
             }
             60%{
-                background-color: $color7;
+                background-color: $color5;
             }
             90%{
-                background-color: $color8;
+                background-color: $color6;
             }
         }
     }
     & .borde{
-        height: 500px;
-        border: 1px solid $color3;
+        height: auto;
+        border: 1px solid $color1;
     }
     & .jumbotron{
         background-image: url(../images/jumbotron.webp);
@@ -34,9 +41,108 @@ main{
         font-style: $fuente;
     }
     & .imagen{
-        margin: 20px;
+        margin: 10px 40px;
         :hover{
-            transform: scaleY(1.25);
+            transform: scaleY(1.1);
         }
+    }
+    & .card{
+        background-color: $color3;
+    }
+    & .titulo{
+        background-color: $color3;
+        text-align: center;
+    }
+    & .historia{
+        background-color: $color2;
+    }
+    & .fotoHistoria{
+        margin-bottom: 20px;
+    }
+    & .formulario{
+        background-color: $color3;
+        width: 500px;
+        height: 400px;
+        margin: 30px;
+        border: 2px solid $color1;
+        & h2{
+            color: $color1;
+        }
+    }
+    & .mapa{
+        background-color: $color2;
+        width: 500px;
+        height: 400px;
+        margin: 30px;
+        border: 2px solid $color1;
+    }
+    & .galeria{
+        display: grid;
+        margin: 20px;
+        height: 100vh;
+        grid-template-areas:
+        "img1 img2 img3"
+        "img1 img4 img5"
+        "img6 img7 img5";
+        & .img{
+            border: 2px solid black;
+            margin: 5px;
+            background-size: cover;
+        }
+        & .img1{
+            grid-area: img1;
+            background-image: url(../images/img1.webp);
+        }
+        & .img2{
+            grid-area: img2;
+            background-image: url(../images/img2.webp);
+        }
+        & .img3{
+            grid-area: img3;
+            background-image: url(../images/img3.webp);
+        }
+        & .img4{
+            grid-area: img4;
+            background-image: url(../images/img4.jpg);
+        }
+        & .img5{
+            grid-area: img5;
+            background-image: url(../images/img5.jpg);
+        }
+        & .img6{
+            grid-area: img6;
+            background-image: url(../images/img6.webp);
+        }
+        & .img7{
+            grid-area: img7;
+            background-image: url(../images/img7.webp);
+        }
+    }
+    @media only screen and (max-width: 480px){
+        .galeria{
+            grid-template-areas:
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5"
+            "img6"
+            "img7";
+        }
+        .img{
+            background-size: 100% 100% !important;
+        }    
+    }
+    @media only screen and (min-width: 481px) and (max-width: 720px){
+        .galeria{
+            grid-template-areas:
+            "img1 img2"
+            "img3 img4"
+            "img5 img6" 
+            "img7 .";
+        }
+        .img5{
+            background-size: 100% 100% !important;
+        }    
     }
 }

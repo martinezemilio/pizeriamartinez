@@ -1,11 +1,10 @@
 .navbar, .footer {
-  background-color: brown !important;
-  background-image: -webkit-gradient(linear, left top, right top, from(orange), to(brown));
-  background-image: linear-gradient(to right, orange, brown);
+  padding: 5px;
+  background-color: whitesmoke !important;
+  background-image: linear-gradient(to right, #333, whitesmoke);
 }
-
-.navbar .nav-link, .footer .nav-link, .navbar .footer li, .footer .navbar li, .footer li {
-  color: black !important;
+.navbar .nav-link, .footer .nav-link, .footer li {
+  color: #FFBA6A !important;
   font-weight: bold;
   font-size: large;
 }
@@ -13,54 +12,39 @@
 main {
   margin-top: 20px;
 }
-
 main .seccion {
-  background-color: orangered;
-  background-image: -webkit-gradient(linear, right top, left top, from(orange), to(orangered));
-  background-image: linear-gradient(to left, orange, orangered);
+  margin: 30px;
+  background-color: whitesmoke !important;
+  background-image: linear-gradient(to right, whitesmoke, #333);
 }
-
-main aside {
-  background-color: lightpink;
-  -webkit-animation-name: efecto;
-          animation-name: efecto;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+main p {
+  font-size: 16px;
+  color: #333;
 }
-
-@-webkit-keyframes efecto {
-  30% {
-    background-color: lightsalmon;
-  }
-  60% {
-    background-color: salmon;
-  }
-  90% {
-    background-color: sienna;
-  }
+main .banner {
+  margin: 20px;
+  text-align: center;
+  background-color: #FFBA6A;
+  animation-name: efecto;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-delay: 0s;
 }
-
 @keyframes efecto {
   30% {
-    background-color: lightsalmon;
+    background-color: #FFC0B8;
   }
   60% {
-    background-color: salmon;
+    background-color: #FF8983;
   }
   90% {
-    background-color: sienna;
+    background-color: #C25452;
   }
 }
-
 main .borde {
-  height: 500px;
-  border: 1px solid black;
+  height: auto;
+  border: 1px solid #333;
 }
-
 main .jumbotron {
   background-image: url(../images/jumbotron.webp);
   background-size: cover;
@@ -68,30 +52,111 @@ main .jumbotron {
   font-weight: bolder;
   font-style: italic;
 }
-
 main .imagen {
-  margin: 20px;
+  margin: 10px 40px;
 }
-
 main .imagen :hover {
-  -webkit-transform: scaleY(1.25);
-          transform: scaleY(1.25);
+  transform: scaleY(1.1);
+}
+main .card {
+  background-color: #FFBA6A;
+}
+main .titulo {
+  background-color: #FFBA6A;
+  text-align: center;
+}
+main .historia {
+  background-color: whitesmoke;
+}
+main .fotoHistoria {
+  margin-bottom: 20px;
+}
+main .formulario {
+  background-color: #FFBA6A;
+  width: 500px;
+  height: 400px;
+  margin: 30px;
+  border: 2px solid #333;
+}
+main .formulario h2 {
+  color: #333;
+}
+main .mapa {
+  background-color: whitesmoke;
+  width: 500px;
+  height: 400px;
+  margin: 30px;
+  border: 2px solid #333;
+}
+main .galeria {
+  display: grid;
+  margin: 20px;
+  height: 100vh;
+  grid-template-areas: "img1 img2 img3" "img1 img4 img5" "img6 img7 img5";
+}
+main .galeria .img {
+  border: 2px solid black;
+  margin: 5px;
+  background-size: cover;
+}
+main .galeria .img1 {
+  grid-area: img1;
+  background-image: url(../images/img1.webp);
+}
+main .galeria .img2 {
+  grid-area: img2;
+  background-image: url(../images/img2.webp);
+}
+main .galeria .img3 {
+  grid-area: img3;
+  background-image: url(../images/img3.webp);
+}
+main .galeria .img4 {
+  grid-area: img4;
+  background-image: url(../images/img4.jpg);
+}
+main .galeria .img5 {
+  grid-area: img5;
+  background-image: url(../images/img5.jpg);
+}
+main .galeria .img6 {
+  grid-area: img6;
+  background-image: url(../images/img6.webp);
+}
+main .galeria .img7 {
+  grid-area: img7;
+  background-image: url(../images/img7.webp);
+}
+@media only screen and (max-width: 480px) {
+  main .galeria {
+    grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6" "img7";
+  }
+  main .img {
+    background-size: 100% 100% !important;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 720px) {
+  main .galeria {
+    grid-template-areas: "img1 img2" "img3 img4" "img5 img6" "img7 .";
+  }
+  main .img5 {
+    background-size: 100% 100% !important;
+  }
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin: 0px;
+  justify-content: space-evenly;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 .footer li {
   list-style: none;
-  padding: 10px;
+  padding: 10px 0px;
 }
 
 body {
-  background-color: orange;
+  background-image: url(../images/fondo.jpg);
 }
+
 /*# sourceMappingURL=estilos.css.map */

@@ -1,10 +1,12 @@
 .footer{
+    margin: 0px;
+    justify-content: space-evenly;
     @extend .navbar;
     display: flex;
     flex-wrap: wrap;
     & li{
         @extend .nav-link;
         list-style: none;
-        padding: 10px;
+        padding: 10px 0px;
     }
 }
